@@ -9,8 +9,8 @@ int ft_isalpha( int a)
     return(0);
 }
 
-int main(void)
+/*int main(void)
 {
     printf("The result is : %d", ft_isalpha('D'));
     return (0);
-}
+}*/
