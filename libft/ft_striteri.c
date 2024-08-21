@@ -1,36 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/19 11:43:16 by oqaroot           #+#    #+#             */
+/*   Updated: 2024/07/22 16:27:23 by oqaroot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-
-void ft_striteri(char *s, void (*f)(unsigned int,char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-  unsigned int i; 
-  i = 0;
+	unsigned int	i;
 
-while (s[i] != '\0')
-  {
-  f(1, s + i);
-  i++;
-  }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
+	s[i] = '\0';
 }
-
-// Example function: Print index and character
-void print_char_index(unsigned int index, char *c) 
-{
-    printf("Character '%c' at index %u\n", *c, index);
-}
-
-int main(void) 
-{
-    char str[] = "Hello";
-
-    // Example: Using ft_striteri to print each character with its index
-    printf("Printing characters with their indices:\n");
-    ft_striteri(str, &print_char_index);
-
-    return 0;
-}
-
-  

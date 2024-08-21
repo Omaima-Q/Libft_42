@@ -1,19 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/19 11:45:40 by oqaroot           #+#    #+#             */
+/*   Updated: 2024/07/22 16:26:44 by oqaroot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <unistd.h>  // For write function and STDOUT_FILENO
 
-void ft_putstr_fd(char *s, int fd) 
+void	ft_putstr_fd(char *s, int fd)
 {
-    // Calculate the length of the string using strlen
-    // Write the entire string (including the null terminator)
-    write(fd, s, strlen(s));
-}
-
-int main(void) 
-{
-    char c[] = "omaima";  // Initialize char array with string
-    int file_descriptor = STDOUT_FILENO;  // Correct type for file descriptor
-
-    ft_putstr_fd(c, file_descriptor);
-
-    return 0;
+	write(fd, s, ft_strlen(s));
 }

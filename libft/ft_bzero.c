@@ -3,39 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omaimaqaroot <omaimaqaroot@student.42.f    +#+  +:+       +#+        */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:48:46 by omaimaqaroo       #+#    #+#             */
-/*   Updated: 2024/07/06 15:14:34 by omaimaqaroo      ###   ########.fr       */
+/*   Updated: 2024/07/22 15:47:53 by oqaroot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h> // Include necessary header for NULL pointer definition
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *placeholder = (unsigned char *)b;
-    
-    while (len > 0)
-    {
-        *placeholder = (unsigned char)c;
-        placeholder++;
-        len--;
-    }
-    
-    return b;
-}
-
-void ft_bzero(void *s, size_t n)
-{
-    ft_memset(s, 0, n);
-}
-
-int main(void)
-{
-    unsigned buffer[10];
-    ft_bzero(buffer, sizeof(buffer)); // Corrected size argument to sizeof(buffer)
-    
-    return 0;
+	ft_memset(s, 0, n);
 }

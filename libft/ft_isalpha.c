@@ -1,16 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/18 20:49:32 by oqaroot           #+#    #+#             */
+/*   Updated: 2024/07/22 15:48:10 by oqaroot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
-int ft_isalpha( int a)
+int	ft_isalpha(int a)
 {
-    if((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
-    return(a);
-    else
-    return(0);
+	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
+		return (a);
+	else
+		return (0);
 }
-
-/*int main(void)
-{
-    printf("The result is : %d", ft_isalpha('D'));
-    return (0);
-}*/

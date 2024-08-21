@@ -3,25 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omaimaqaroot <omaimaqaroot@student.42.f    +#+  +:+       +#+        */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:49:29 by omaimaqaroo       #+#    #+#             */
-/*   Updated: 2024/07/06 15:20:04 by omaimaqaroo      ###   ########.fr       */
+/*   Updated: 2024/07/19 19:49:34 by oqaroot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if( c >= 0 && c <= 127)
-        return(c);
-    return(0);
-}
-
-#include <stdio.h>
-int main(void)
-{
-    printf("%d", ft_isascii('l'));
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

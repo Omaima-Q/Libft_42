@@ -3,38 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omaimaqaroot <omaimaqaroot@student.42.f    +#+  +:+       +#+        */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:39:58 by omaimaqaroo       #+#    #+#             */
-/*   Updated: 2024/07/07 15:05:26 by omaimaqaroo      ###   ########.fr       */
+/*   Updated: 2024/07/22 17:19:59 by oqaroot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-void    *ft_memmove(void *dst, void const *src, size_t len)
+void	*ft_memmove(void *dst, void const *src, size_t len)
 {
-    char	*tmp;
+	unsigned char	*altdst;
+	unsigned char	*altsrc;
 
-	tmp = (char *)malloc(sizeof(char) * len);
-	if (tmp == NULL)
-		return (NULL);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	free(tmp);
+	altdst = dst;
+	altsrc = (unsigned char *)src;
+	if (dst < src)
+	{
+		return (ft_memcpy(dst, src, len));
+	}
+	if (dst > src)
+	{
+		while (len--)
+			altdst[len] = altsrc[len];
+	}
 	return (dst);
-}
-
-int main(void)
-{
-    char source[] = "Hello";
-	char destination[10];  // Make sure destination has enough space
-
-	ft_memmove(destination, source, 5);
-
-	printf("Source: %s\n", source);  // Source remains unchanged
-	printf("Destination: %s\n", destination);  // Destination now contains "Hello"
-
 }

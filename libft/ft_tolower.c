@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omaimaqaroot <omaimaqaroot@student.42.f    +#+  +:+       +#+        */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:50:41 by omaimaqaroo       #+#    #+#             */
-/*   Updated: 2024/07/04 11:30:45 by omaimaqaroo      ###   ########.fr       */
+/*   Updated: 2024/07/19 19:45:21 by oqaroot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c <= 'z' && c >= 'a')
-		return (1);
-	return (0);
+	if (c > 64 && c < 91)
+		c += 32;
+	return (c);
 }

@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/19 11:47:40 by oqaroot           #+#    #+#             */
+/*   Updated: 2024/07/22 16:26:30 by oqaroot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -14,12 +25,4 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, s, i);
 	write(fd, "\n", 1);
-}
-
-int	main(void)
-{
-	int file_descriptor = STDOUT_FILENO;
-	// Test Case 1: Normal string
-	char *message1 = "Hello, World!";
-	ft_putendl_fd(message1, file_descriptor);
 }

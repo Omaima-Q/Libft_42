@@ -1,18 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/19 11:47:46 by oqaroot           #+#    #+#             */
+/*   Updated: 2024/07/22 16:26:24 by oqaroot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
-}
-
-int	main(void)
-{
-	char			s;
-	unsigned int	file_descriptor;
-
-	s = 'Z';
-	file_descriptor = STDOUT_FILENO;
-	ft_putchar_fd(s, file_descriptor);
-	return (0);
 }

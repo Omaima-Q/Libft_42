@@ -3,41 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omaimaqaroot <omaimaqaroot@student.42.f    +#+  +:+       +#+        */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 21:34:16 by omaimaqaroo       #+#    #+#             */
-/*   Updated: 2024/07/06 15:21:42 by omaimaqaroo      ###   ########.fr       */
+/*   Updated: 2024/07/22 17:00:57 by oqaroot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void *ft_memcpy(void *dst, void const *src, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned char	*altdst;
+	unsigned char	*altdst;
 	unsigned char	*altsrc;
+	size_t			i;
 
 	altdst = (unsigned char *)dst;
 	altsrc = (unsigned char *)src;
-	while (len > 0)
+	if (!altdst && !altsrc)
+		return (0);
+	i = 0;
+	while (i < n)
 	{
-		*altdst = *altsrc;
-		altdst++;
-		altsrc++;
-		len--;
+		altdst[i] = altsrc[i];
+		i++;
 	}
 	return (dst);
-}
-
-int main(void) 
-{
-    char src[] = "Hello, World!";
-    char dst[20];  // Destination buffer
-    
-    ft_memcpy(dst, src, sizeof(src));  
-    printf("Source: %s\n", src);
-    printf("Destination: %s\n", dst);
-    
-    return 0;
 }

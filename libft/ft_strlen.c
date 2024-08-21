@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omaimaqaroot <omaimaqaroot@student.42.f    +#+  +:+       +#+        */
+/*   By: oqaroot <oqaroot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:50:15 by omaimaqaroo       #+#    #+#             */
-/*   Updated: 2024/07/04 11:30:38 by omaimaqaroo      ###   ########.fr       */
+/*   Updated: 2024/07/19 11:32:18 by oqaroot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
@@ -20,11 +20,4 @@ size_t		ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
-
-int main()
-{
-    char s[] = "good";
-
-    printf(" %zu ", ft_strlen(s));
 }
