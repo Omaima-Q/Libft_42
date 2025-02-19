@@ -14,19 +14,17 @@
 
 int	ft_atoi(const char *str)
 {
-	int					sign;
+	int			sign;
 	unsigned long long	nbr;
 
 	sign = 1;
 	nbr = 0;
 	while (*str == 32 || (*str >= 9 && *str <= 13))
-	{
 		str++;
-	}
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			sign = sign * -1;
+			sign *= -1;
 		str++;
 	}
 	while (*str != '\0' && *str >= '0' && *str <= '9')
